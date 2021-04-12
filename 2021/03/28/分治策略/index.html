@@ -201,13 +201,17 @@
             <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>所谓的分治就是指的分而治之，即将大规模的问题分解成几个小规模的问题，通过对小规模问题的求解达到对整个问题的求解。当我们将问题分解为两个较小的问题求解时的分治方法称为二分法。</p>
 <p>分治的基本思想是将一个规模为n 的问题分解为k个规模较小的子问题，这些子问题互相独立且与原文相同。找出各部分的解，然后把各部分的解组成整个问题的解。</p>
 <ul>
-<li><p>1.解决算法实现的同时，需要估算算法实现所需的时间。分治算法的时间是这样确定的：解决子问题所需的工作总量（由子问题的个数、解决每个子问题的工作量决定）合并所有子问题的工作量。</p>
+<li><ol>
+<li>解决算法实现的同时，需要估算算法实现所需的时间。分治算法的时间是这样确定的：解决子问题所需的工作总量（由子问题的个数、解决每个子问题的工作量决定）合并所有子问题的工作量。</li>
+</ol>
 </li>
 <li><ol start="2">
 <li>分治法是把任意大小问题尽可能地等分为两个子问题地递归算法</li>
 </ol>
 </li>
-<li><p>3.分治地具体过程：</p>
+<li><ol start="3">
+<li>分治地具体过程：</li>
+</ol>
 </li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">begin <span class="comment">//开始</span></span><br><span class="line">	<span class="keyword">if</span> 问题不可分 then 返回问题的解</span><br><span class="line">	<span class="keyword">else</span> begin</span><br><span class="line">		从原问题中划分出含一半运算对象的子问题<span class="number">1</span>；</span><br><span class="line">		递归调用分治法过程求出解<span class="number">1</span>；</span><br><span class="line">		从原问题中划出含有另一半运算对象的子问题<span class="number">2</span>;</span><br><span class="line">		递归调用分治法过程，求出解<span class="number">2</span>；</span><br><span class="line">		将解<span class="number">1</span>和解<span class="number">2</span>组合成整个问题的解；</span><br><span class="line">	endl</span><br><span class="line">end;&#123;结束&#125;</span><br></pre></td></tr></table></figure>
