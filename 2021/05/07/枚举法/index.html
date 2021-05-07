@@ -205,6 +205,17 @@
 <li>利用循环语句、条件判断语句逐步求解或证明；</li>
 </ul>
 <p>枚举法的特点使算法简单，但有时运算量大。对于可能确定解的指域又意识找不到其他更好的算法使可以采用枚举法。</p>
+<h2 id="例1"><a href="#例1" class="headerlink" title="例1"></a>例1</h2><blockquote>
+<p>求满足白哦大师A+B=C 的所有整数解，其中A，B，C为1~3之间的整数。</p>
+</blockquote>
+<p>分析：本题非常简单，即枚举所有情况，符合表达式即可，算法如下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> A:= <span class="number">1</span> to <span class="number">3</span> <span class="keyword">do</span></span><br><span class="line">    <span class="keyword">for</span> B:= <span class="number">1</span> to <span class="number">3</span> <span class="keyword">do</span></span><br><span class="line">        <span class="keyword">for</span> C:= <span class="number">1</span> to <span class="number">3</span> <span class="keyword">do</span></span><br><span class="line">            <span class="keyword">if</span>(A+B==C) then </span><br><span class="line">                <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
+
+<p>上例从枚举法的定义可以看出，枚举法的本质属于搜索。但是隐式图的搜索有所区别，再采用枚举法求解的问题时，必须满足两个条件：</p>
+<ul>
+<li>预先确定接的个数n；</li>
+<li>确定每个变量A，B，C 的取值变化范围。</li>
+</ul>
 
         </div>
 
